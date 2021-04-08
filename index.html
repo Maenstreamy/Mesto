@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Mesto</title>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <header class='header'>
+            <img class="header-logo" src="assets/logo.svg" alt="Mesto">
+        </header>
+
+        <section class="profile">
+            <div class="profile-container">
+                <div class="profile-avatar"></div>
+                <div class="profile-info">
+                    <div class="profile-info-wrap">
+                        <h2 class="profile-info-name">Жак-Ив Кусто</h2>
+                        <img class="profile-info-button" src="assets/editbutton.svg" alt="Edit Button" id="edit">
+                    </div>
+                    <p class="profile-info-workplace">Исследователь океана</p>
+                </div>
+                <img class="profile-addbutton" src="assets/addbutton.svg" alt="Add Button" id="addplace">
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="gallery-elem">
+                <div class="gallery-elem-image"
+                    style="background-image: url('https://www.soleans.ru/wp-content/uploads/Lagoa-do-Fogo-Sao-Migel.jpg')">
+                    <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
+                </div>
+                <div class="gallery-elem-info">
+                    <h2 class="gallery-elem-name">Карачаевск</h2>
+                    <button class="gallery-elem-like"></button>
+                </div>
+            </div>
+            <div class="gallery-elem">
+                <div class="gallery-elem-image"
+                    style="background-image: url('https://cdn.fishki.net/upload/post/2019/12/27/3183208/3-12.jpg')">
+                    <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
+                </div>
+                <div class="gallery-elem-info">
+                    <h2 class="gallery-elem-name">Гора Эльбрус</h2>
+                    <button class="gallery-elem-like"></button>
+                </div>
+            </div>
+            <div class="gallery-elem">
+                <div class="gallery-elem-image"
+                    style="background-image: url('https://wallbox.ru/wallpapers/main2/201726/dereva-sneg-priroda-zima-zabor-izgorod.jpg')">
+                    <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
+                </div>
+                <div class="gallery-elem-info">
+                    <h2 class="gallery-elem-name">Домбай</h2>
+                    <button class="gallery-elem-like"></button>
+                </div>
+            </div>
+            <div class="gallery-elem">
+                <div class="gallery-elem-image"
+                    style="background-image: url('https://proprikol.ru/wp-content/uploads/2020/07/kartinki-zimnij-vecher-27.jpg')">
+                    <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
+                </div>
+                <div class="gallery-elem-info">
+                    <h2 class="gallery-elem-name">Гора Эльбрус</h2>
+                    <button class="gallery-elem-like"></button>
+                </div>
+            </div>
+            <div class="gallery-elem">
+                <div class="gallery-elem-image"
+                    style="background-image: url('https://avatars.mds.yandex.net/get-zen_doc/1917783/pub_5cdfebc1b3217a00b3885c44_5cdff5686a5bb500b3d59931/scale_1200')">
+                    <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
+                </div>
+                <div class="gallery-elem-info">
+                    <h2 class="gallery-elem-name">Домбай</h2>
+                    <button class="gallery-elem-like"></button>
+                </div>
+            </div>
+            <div class="gallery-elem">
+                <div class="gallery-elem-image"
+                    style="background-image: url('https://img4.goodfon.ru/wallpaper/nbig/c/5d/islandiia-seljaland-waterfall-skala-vodopad-mokh-trava-zelen.jpg')">
+                    <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
+                </div>
+                <div class="gallery-elem-info">
+                    <h2 class="gallery-elem-name">Карачаево-Черкесия</h2>
+                    <button class="gallery-elem-like"></button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <h2 class="footer-header">© 2020 Mesto Russia</h2>
+        </footer>
+
+    </div>
+
+    <div class="modal-profile" id="profile" role="dialog" aria-hidden="true" data-backdrop="static"
+        data-keyboard="false">
+        <img src="assets/close-icon.svg" alt="close" class="modal-profile-close" id="close">
+        <div class="modal-profile-wrapper">
+            <form action="" class="modal-profile-form">
+                <h2 class="modal-profile-header">Редактировать профиль</h2>
+                <input class="modal-profile-input" type="text" id="inputname"><br>
+                <input class="modal-profile-input" type="text" id="inputwork"><br>
+                <input class="modal-profile-input-submit" type="button" value="Сохранить" id="submit" false>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-place" id="place" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <img src="assets/close-icon.svg" alt="close" class="modal-place-close" id="closeplace">
+        <div class="modal-place-wrapper">
+            <form action="" class="modal-place-form">
+                <h2 class="modal-place-header">Новое место</h2>
+                <input class="modal-place-input" type="text" id="inputplace" placeholder="Название"><br>
+                <input class="modal-place-input" type="text" id="inputlink" placeholder="Ссылка на картинку"><br>
+                <input class="modal-place-input-submit" type="button" value="Создать" id="save" false>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-picture" id="picture">
+        <img src="assets/close-icon.svg" alt="close" class="modal-picture-close" id="closepicture">
+        <div class="modal-picture-wrapper">
+            <img src="" alt="picture" class="modal-picture-image">
+            <h3 class="modal-picture-header"></h3>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="overlay" hidden></div>
+
+    <template id="template">
+        <div class="gallery-elem">
+            <div class="gallery-elem-image">
+                <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
+            </div>
+            <div class="gallery-elem-info">
+                <h2 class="gallery-elem-name"></h2>
+                <img src="assets/like.svg" alt="like" class="gallery-elem-like">
+            </div>
+        </div>
+    </template>
+
+    <script src='modal.js'></script>
+    <script src='place.js'></script>
+
+</body>
+
+</html>
