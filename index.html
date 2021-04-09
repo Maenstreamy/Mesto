@@ -56,7 +56,7 @@
             </div>
             <div class="gallery-elem">
                 <div class="gallery-elem-image"
-                    style="background-image: url('https://wallbox.ru/wallpapers/main2/201726/dereva-sneg-priroda-zima-zabor-izgorod.jpg')">
+                    style="background-image: url('https://avatars.mds.yandex.net/get-zen_doc/53963/pub_5b6f013a7ddf1100aaf288e9_5b6f015081115500a962ba34/scale_1200')">
                     <img src="assets/clear.svg" alt="" class="gallery-elem-clear">
                 </div>
                 <div class="gallery-elem-info">
@@ -108,9 +108,11 @@
         <div class="modal-profile-wrapper">
             <form action="" class="modal-profile-form">
                 <h2 class="modal-profile-header">Редактировать профиль</h2>
-                <input class="modal-profile-input" type="text" id="inputname"><br>
-                <input class="modal-profile-input" type="text" id="inputwork"><br>
-                <input class="modal-profile-input-submit" type="button" value="Сохранить" id="submit" false>
+                <input class="modal-profile-input" type="text" id="inputname" maxlength="100">
+                <span class="valid-error">Вы пропустили это поле</span>
+                <input class="modal-profile-input" type="text" id="inputwork" maxlength="100">
+                <span class="valid-error">Вы пропустили это поле</span>
+                <input class="modal-profile-input-submit" type="button" value="Сохранить" id="submit">
             </form>
         </div>
     </div>
@@ -120,8 +122,10 @@
         <div class="modal-place-wrapper">
             <form action="" class="modal-place-form">
                 <h2 class="modal-place-header">Новое место</h2>
-                <input class="modal-place-input" type="text" id="inputplace" placeholder="Название"><br>
-                <input class="modal-place-input" type="text" id="inputlink" placeholder="Ссылка на картинку"><br>
+                <input class="modal-place-input" type="text" id="inputplace" placeholder="Название" maxlength="200">
+                <span class="valid-error">Вы пропустили это поле</span>
+                <input class="modal-place-input" type="text" id="inputlink" placeholder="Ссылка на картинку">
+                <span class="valid-error">Введите адрес сайта</span>
                 <input class="modal-place-input-submit" type="button" value="Создать" id="save" false>
             </form>
         </div>
@@ -131,7 +135,7 @@
         <img src="assets/close-icon.svg" alt="close" class="modal-picture-close" id="closepicture">
         <div class="modal-picture-wrapper">
             <img src="" alt="picture" class="modal-picture-image">
-            <h3 class="modal-picture-header"></h3>
+            <p class="modal-picture-header"></p>
         </div>
     </div>
 
@@ -151,6 +155,7 @@
 
     <script src='modal.js'></script>
     <script src='place.js'></script>
+    <script src="validate.js"></script>
 
 </body>
 

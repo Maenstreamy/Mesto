@@ -22,7 +22,7 @@ document.addEventListener("keydown", event => {
     }
 })
 
-////
+///
 
 let gallery = document.getElementById('gallery')
 let inputPlace = document.querySelector('#inputplace')
@@ -43,19 +43,18 @@ save.onclick = function () {
     closePlace()
 }
 
-place.addEventListener("keydown", event => {
-    if (event.keyCode === 13) {
-        savePlace()
-        closePlace()
-    }
-})
+// place.addEventListener("keydown", event => {
+//     if (event.keyCode === 13) {
+//         savePlace()
+//         closePlace()
+//     }
+// })
 
 const clear = document.querySelector('.gallery-elem-clear')
 const picture = document.querySelector('#picture')
 const closePicture = document.querySelector('#closepicture')
 const pictureImage = document.querySelector('.modal-picture-image')
 let pictureHeader = document.querySelector('.modal-picture-header')
-// let galleryHeader = document.querySelector('.gallery-elem-name')
 
 
 function closeModalPicture() {
@@ -76,8 +75,8 @@ document.addEventListener("keydown", event => {
 gallery.addEventListener('click', event => {
     if (event.target.closest('.gallery-elem-clear')) {
         let galleryElem = event.target.closest('.gallery-elem')
-        overlay.style.display = 'none'
-        galleryElem.remove().remove()
+        galleryElem.remove()
+        return
     }
 
     if (event.target.closest('.gallery-elem-image')) {
