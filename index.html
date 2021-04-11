@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets//favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <title>Mesto</title>
@@ -106,7 +107,7 @@
         data-keyboard="false">
         <img src="assets/close-icon.svg" alt="close" class="modal-profile-close" id="close">
         <div class="modal-profile-wrapper">
-            <form action="" class="modal-profile-form">
+            <form class="modal-profile-form">
                 <h2 class="modal-profile-header">Редактировать профиль</h2>
                 <input class="modal-profile-input" type="text" id="inputname" maxlength="100">
                 <span class="valid-error">Вы пропустили это поле</span>
@@ -120,13 +121,13 @@
     <div class="modal-place" id="place" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <img src="assets/close-icon.svg" alt="close" class="modal-place-close" id="closeplace">
         <div class="modal-place-wrapper">
-            <form action="" class="modal-place-form">
+            <form class="modal-place-form">
                 <h2 class="modal-place-header">Новое место</h2>
                 <input class="modal-place-input" type="text" id="inputplace" placeholder="Название" maxlength="200">
                 <span class="valid-error">Вы пропустили это поле</span>
                 <input class="modal-place-input" type="text" id="inputlink" placeholder="Ссылка на картинку">
                 <span class="valid-error">Введите адрес сайта</span>
-                <input class="modal-place-input-submit" type="button" value="Создать" id="save" false>
+                <input class="modal-place-input-submit" type="button" value="Создать" id="save">
             </form>
         </div>
     </div>
@@ -134,7 +135,7 @@
     <div class="modal-picture" id="picture">
         <img src="assets/close-icon.svg" alt="close" class="modal-picture-close" id="closepicture">
         <div class="modal-picture-wrapper">
-            <img src="" alt="picture" class="modal-picture-image">
+            <img src="#" alt="picture" class="modal-picture-image">
             <p class="modal-picture-header"></p>
         </div>
     </div>
