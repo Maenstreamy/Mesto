@@ -46,9 +46,3 @@ function submitEdit() {
 submit.onclick = function () {
     submitEdit()
 }
-
-// modal.addEventListener("keydown", event => {
-//     if (event.keyCode === 13) {
-//         submitEdit()
-//     }
-// })

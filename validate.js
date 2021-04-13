@@ -1,4 +1,4 @@
-/// PROFILE-VALIDATION
+/// PROFILE-VALIDATE
 
 let validError = document.querySelector('.valid-error')
 
@@ -22,11 +22,11 @@ checkProfileValidate(inputName)
 checkProfileValidate(inputWork)
 
 
-/// PLACE-VALIDATION
+/// PLACE-VALIDATE
 
 save.disabled = true
 
-function checkPlaceValidation(input) {
+function checkPlaceValidate(input) {
     input.addEventListener("input", event => {
         let errPlace = inputPlace.nextElementSibling
         let errLink = inputLink.nextElementSibling
@@ -55,5 +55,27 @@ function checkPlaceValidation(input) {
     }, false)
 }
 
-checkPlaceValidation(inputPlace)
-checkPlaceValidation(inputLink)
+checkPlaceValidate(inputPlace)
+checkPlaceValidate(inputLink)
+
+/// AVATAR-VALIDATE
+
+function checkAvatarValidate(input) {
+    input.addEventListener("input", event => {
+        let errAvatar = input.nextElementSibling
+
+        if (!input.value.includes('http')) {
+            errAvatar.style.display = 'block'
+            avatarSave.disabled = true
+        }
+
+        if (input.value.includes('http')) {
+            errAvatar.style.display = 'none'
+        }
+
+        if (input.value.includes('http')) {
+            errAvatar.style.display = 'none'
+            avatarSave.disabled = false
+        }
+    }, false)
+}
